@@ -1,0 +1,7 @@
+Incluindo JavaScript em arquivos HTML5
+
+<script>
+  //aqui fica a codificação JavaScript
+</script>
+
+<script src="meu_script.js"></script>
