@@ -1,2 +1,4 @@
 Learning/CSharp/Formação ASP.NET Core REST APIs/Alura.Loja/packages/
 Learning/CSharp/Formação ASP.NET Core REST APIs/Alura.WebAPI/packages/
+*.class
+Learning/DEVOPS/ambiente_dev/bionic/.vagrant/
