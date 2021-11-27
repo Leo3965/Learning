@@ -1,33 +1,24 @@
 import {Client} from './Client.js';
-import {CheckingAccount} from './CheckingAccount.js';
-
+import {CheckingAccount} from './account/CheckingAccount.js';
+import {SavingsAccount} from "./account/SavingsAccount.js";
+import {Manager} from "./employee/Manager.js";
+import {Director} from "./employee/Director.js";
+import {AuthenticationSystem} from "./AuthenticationSystem.js";
 
 const maria = new Client('Maria', 123456)
 
-const maccount = new CheckingAccount();
-maccount.agency = 1001
-maccount.client = maria
+const checkingAccount = new CheckingAccount(maria, 1001)
+checkingAccount.deposit(200)
+checkingAccount.withdraw(20)
+const savingsAccount = new SavingsAccount(110, maria, 1001)
+savingsAccount.withdraw(10)
+// console.log(checkingAccount, savingsAccount)
 
-maccount.deposit(200)
+const manager = new Manager("Rodrigo", 5000, 123456)
+manager.registerPassword("123")
+const director = new Director("Ricardo", 10000, 987654)
+director.registerPassword("123")
 
-const joao = new Client('João', 456321)
+const isLogged = AuthenticationSystem.login(director, "123")
 
-const jaccount = new CheckingAccount();
-jaccount.agency = 1002
-jaccount.client = joao
-
-const account = new CheckingAccount();
-account.agency = 1001
-account.client = 0
-
-jaccount.deposit(50)
-
-maccount.transfer(60, jaccount)
-
-/*const client1Nome = "Ricardo"
-const client1CPF = 111222333
-const client1Agencia = 1001
-const client1Saldo = 0*/
-
-console.log(CheckingAccount.accountNumber)
-console.log(maccount, jaccount, account)
+console.log(isLogged)
