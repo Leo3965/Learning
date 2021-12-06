@@ -40,6 +40,42 @@
         margin: 40px;
 
         /* FLEXBOX */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 30px;
+      }
+
+      .el {
+        /*
+        DEFAULTS
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        margin-right: 40px;*/
+
+        flex-basis: 200px;
+        flex-shrink: 1;
+      }
+
+      .el--1 {
+        align-self: flex-start;
+      }
+
+      .el--4 {
+        align-self: stretch;
+      }
+
+      .el--8 {
+        align-self: flex-end;
+      }
+
+      .el--5 {
+        order: 1;
+      }
+
+      .el--6 {
+        order: -1;
       }
     </style>
   </head>
@@ -50,9 +86,9 @@
       <div class="el el--3">CSS</div>
       <div class="el el--4">are</div>
       <div class="el el--5">amazing</div>
-      <div class="el el--6">languages</div>
-      <div class="el el--7">to</div>
-      <div class="el el--8">learn</div>
+<!--      <div class="el el&#45;&#45;6">languages</div>-->
+<!--      <div class="el el&#45;&#45;7">to</div>-->
+<!--      <div class="el el&#45;&#45;8">learn</div>-->
     </div>
   </body>
 </html>
