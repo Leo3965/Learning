@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 875px;
+    font-family: sans-serif;
+    border: 5px solid black;
+    line-height: 1.4;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 240px 1.5fr 1fr;
+
+    column-gap: 20px;
+}
+
+.main-content{
+    width: 300px;
+    height: 240px;
+}
+
+.top-information {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+}
+
+.details{
+}
+
+.sale-img{
+    width: 240px;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    background: #f7f7f7;
+    text-transform: uppercase;
+    padding: 5px;
+    position: relative;
+}
+
+h2::before {
+    content: "SALE";
+    letter-spacing: 3px;
+    background-color: #EC2F2F;
+    font-weight: bold;
+    color: white;
+    padding: 5px 10px;
+    font-size: 16px;
+    position: absolute;
+    top: -25px;
+    left: -20px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+.strong {
+    margin-top: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 24px;
+    justify-self: start;
+}
+
+.shipping{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #444040;
+    justify-self: end;
+}
+
+.product-information {
+}
+
+.send-card{
+    background: black;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+.send-card:hover {
+    background: white;
+    color: black;
+    border-top: 5px solid black;
+}
+.more-information, .more-information:visited{
+    color: black;
+}
+
+.more-information:hover, .more-information:active{
+    text-decoration: none;
+}
+
+ul {
+    margin: 10px 10px;
+    list-style: square;
+}
+
+li{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.block-color {
+    margin-top: 10px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(6, 10px);
+    column-gap: 30px;
+}
+
+.block-color div {
+    padding: 10px;
+}
+
+.block-color_black {
+    background-color: black;
+}
+
+.block-color_blue {
+    background-color: #2F6EE2;
+}
+
+.block-color_red{
+    background-color: #EC2F2F;
+}
+.block-color_yellow{
+    background-color: yellow;
+}
+
+.block-color_green {
+    background-color: green;
+}
+
+.block-color_brown {
+    background-color: brown;
+}
+
+h3 {
+    margin-top: 20px;
+}

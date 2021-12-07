@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 825px;
+    font-family: sans-serif;
+    border: 5px solid black;
+    line-height: 1.4;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.main-content{
+}
+
+.details{
+}
+
+.sale-img{
+    width: 220px;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    background: #f7f7f7;
+    text-transform: uppercase;
+    padding: 5px;
+    position: relative;
+}
+
+h2::before {
+    content: "SALE";
+    letter-spacing: 3px;
+    background-color: #EC2F2F;
+    font-weight: bold;
+    color: white;
+    padding: 5px 10px;
+    font-size: 16px;
+    position: absolute;
+    top: -25px;
+    left: -20px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+.strong {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+.price {
+    font-size: 24px;
+}
+
+.shipping{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #444040;
+}
+
+.product-information {
+    margin-bottom: 10px;
+}
+
+.send-card{
+    background: black;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+.send-card:hover {
+    background: white;
+    color: black;
+    border-top: 5px solid black;
+}
+
+.more-information {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.more-information, .more-information:visited{
+    color: black;
+}
+
+.more-information:hover, .more-information:active{
+    text-decoration: none;
+}
+
+ul {
+    margin: 10px 10px;
+    list-style: square;
+}
+
+li{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.block-color div{
+    padding: 10px;
+}
+
+.block-color {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.block-color_black {
+    background-color: black;
+}
+
+.block-color_blue {
+    background-color: #2F6EE2;
+}
+
+.block-color_red{
+    background-color: #EC2F2F;
+}
+.block-color_yellow{
+    background-color: yellow;
+}
+
+.block-color_green {
+    background-color: green;
+}
+
+.block-color_brown {
+    background-color: brown;
+}
+
+.main-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-content{
+    align-items: stretch;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
