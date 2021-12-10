@@ -23,6 +23,7 @@ GRAY: #343a40
 body {
   font-family: 'Inter', sans-serif;
   color: #343a40;
+  border-bottom: 8px solid #087f5b;
 }
 
 .container {
@@ -50,11 +51,8 @@ h2 {
   background-color: #087f5b;
   color: #fff;
   font-weight: 500;
-  font-size: 18px;
   text-decoration: none;
   text-transform: uppercase;
-
-  padding: 16px 32px;
   display: inline-block;
 }
 
@@ -62,6 +60,15 @@ h2 {
   background-color: #099268;
 }
 
+.btn--big {
+  font-size: 18px;
+  padding: 16px 32px;
+}
+
+.btn--small {
+  font-size: 14px;
+  padding: 8px 12px;
+}
 /* ------------------------ */
 /* COMPONENT STYLES */
 /* ------------------------ */
@@ -86,6 +93,8 @@ h1 {
   line-height: 1.1;
   letter-spacing: -1px;
   /* 44 / 52 / 62*/
+
+  /*text-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);*/
 }
 
 .header-text {
@@ -98,6 +107,10 @@ img {
 
 /* FEATURES */
 .features-icon {
+  stroke: #087f5b;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 16px;
 }
 
 .features-title {
@@ -112,6 +125,9 @@ img {
 
 /* TESTIMONIAL */
 .testimonial-section {
+  background-color: #087f5b;
+  color: #fff;
+  padding: 24px;
 }
 
 .testimonial-box {
@@ -132,6 +148,10 @@ img {
 }
 
 /* CHAIRS */
+.chair {
+  box-shadow: 0 20px 30px 10px rgba(0, 0, 0, 0.07);
+}
+
 .chair-box {
   padding: 24px;
 }
@@ -158,6 +178,9 @@ h3 {
 }
 
 .chair-icon {
+  stroke: #087f5b;
+  width: 24px;
+  height: 24px;
 }
 
 .chair-price {
@@ -169,4 +192,5 @@ h3 {
 footer {
   margin-bottom: 24px;
   font-size: 12px;
+  color: #495057;
 }
