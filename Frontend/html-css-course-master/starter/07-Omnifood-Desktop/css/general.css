@@ -15,13 +15,14 @@ FONT SIZE SYSTEM (px)
 --- 02 COLORS
  - PRIMARY: #e67e22
 
- - TINS: #fdf2e9
+ - TINS: #fdf2e9, #eb984e
  - SHADES: #cf711f
  - ACCENTS:
- - GREYS: #555, #333
+ - GREYS: #6f6f6f, #555, #333
 
 --- 03 SHADOWS
       DEFAULT: 9px
+      box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 
 --- 04 BORDER-RADIUS
 
@@ -64,6 +65,14 @@ body {
     display: grid;
     column-gap: 6.4rem;
     row-gap: 9.6rem;
+}
+
+/*.grid:last-child {*/
+/*    margin-bottom: 0;*/
+/*}*/
+
+.grid:not(:last-child) {
+    margin-bottom: 9.6rem;
 }
 
 .grid--center-v {
@@ -169,13 +178,32 @@ body {
     border-bottom: 1px solid transparent;
 }
 
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.list-item {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+.list-icon {
+    width: 3rem;
+    height: 3rem;
+    color: #e67e22;
+}
+
 /* HELPER/SETTINGS CLASSES */
 .margin-right-sm {
     margin-right: 1.6rem !important;
 }
 
 .margin-bottom-md {
-    margin-bottom: 4.8rem; !important;
+    margin-bottom: 4.8rem !important;
 }
 
 .center-text {
