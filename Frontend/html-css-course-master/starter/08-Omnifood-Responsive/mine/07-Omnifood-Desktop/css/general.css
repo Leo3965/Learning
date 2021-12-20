@@ -41,6 +41,7 @@ FONT SIZE SYSTEM (px)
 html {
     /* 10px / 16px = 0.625px = 65.2% */
     font-size: 62.5%; /* 10px */
+    overflow-x: hidden;
 }
 
 body {
@@ -48,6 +49,7 @@ body {
     line-height: 1;
     font-weight: 400;
     color: #555;
+    overflow-x: hidden;
 }
 
 /*************************************/
@@ -200,6 +202,7 @@ body {
     display: flex;
     align-items: center;
     gap: 1.6rem;
+    line-height: 1.2;
 }
 .list-icon {
     width: 3rem;
