@@ -42,10 +42,13 @@ html {
     /* 10px / 16px = 0.625px = 65.2% */
     font-size: 62.5%; /* 10px */
     overflow-x: hidden;
+
+    /*Does not work on Safari*/
+    /*scroll-behavior: smooth;*/
 }
 
 body {
-    font-family: "Rubik",sans-serif;
+    font-family: "Rubik", sans-serif;
     line-height: 1;
     font-weight: 400;
     color: #555;
@@ -102,6 +105,7 @@ body {
     color: #333;
     letter-spacing: -0.05rem;
 }
+
 .heading-primary {
     font-size: 5.2rem;
     line-height: 1.05;
@@ -129,6 +133,7 @@ body {
     margin-bottom: 1.6rem;
     letter-spacing: 0.75rem;
 }
+
 .btn,
 .btn:link,
 .btn:visited {
@@ -204,6 +209,7 @@ body {
     gap: 1.6rem;
     line-height: 1.2;
 }
+
 .list-icon {
     width: 3rem;
     height: 3rem;
