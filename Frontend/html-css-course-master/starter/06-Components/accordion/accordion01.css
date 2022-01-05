@@ -59,6 +59,10 @@ body {
     stroke: #087f5b; /*stroke = color of the icon*/
 }
 
+.icon:hover {
+    cursor: pointer;
+}
+
 .hidden-box {
     grid-column: 2;
     display: none;
