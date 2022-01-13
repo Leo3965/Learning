@@ -8,12 +8,9 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Alura.Filmes.App</RootNamespace>
     <AssemblyName>Alura.Filmes.App</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +30,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Alura.Filmes.App.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.EntityFrameworkCore, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
@@ -127,25 +127,57 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dados\AluraFilmesContexto.cs" />
     <Compile Include="Dados\AtorConfiguration.cs" />
+    <Compile Include="Dados\ClienteConfiguration.cs" />
     <Compile Include="Dados\FilmeAtorConfiguration.cs" />
     <Compile Include="Dados\FilmeConfiguration.cs" />
-    <Compile Include="Dados\FilmesContexto.cs" />
+    <Compile Include="Dados\FuncionarioConfiguration.cs" />
     <Compile Include="Dados\IdiomaConfiguration.cs" />
+    <Compile Include="Dados\PessoaConfiguration.cs" />
+    <Compile Include="Extensions\ClassificacaoIndicativaExtensions.cs" />
     <Compile Include="Extensions\DbContextExtensions.cs" />
-    <Compile Include="Migrations\20220113000212_Idioma.cs" />
-    <Compile Include="Migrations\20220113000212_Idioma.designer.cs">
-      <DependentUpon>20220113000212_Idioma.cs</DependentUpon>
+    <Compile Include="Migrations\20170928150159_Inicial.cs" />
+    <Compile Include="Migrations\20170928150159_Inicial.designer.cs">
+      <DependentUpon>20170928150159_Inicial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20220113002044_Idioma-New.cs" />
-    <Compile Include="Migrations\20220113002044_Idioma-New.designer.cs">
-      <DependentUpon>20220113002044_Idioma-New.cs</DependentUpon>
+    <Compile Include="Migrations\20171002175648_Filmes.cs" />
+    <Compile Include="Migrations\20171002175648_Filmes.designer.cs">
+      <DependentUpon>20171002175648_Filmes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\FilmesContextoModelSnapshot.cs" />
+    <Compile Include="Migrations\20171002194922_Idioma.cs" />
+    <Compile Include="Migrations\20171002194922_Idioma.designer.cs">
+      <DependentUpon>20171002194922_Idioma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20171003210825_IndiceAtorUltimoNome.cs" />
+    <Compile Include="Migrations\20171003210825_IndiceAtorUltimoNome.designer.cs">
+      <DependentUpon>20171003210825_IndiceAtorUltimoNome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20171003211112_UniqueAtorPrimeiroUltimoNome.cs" />
+    <Compile Include="Migrations\20171003211112_UniqueAtorPrimeiroUltimoNome.designer.cs">
+      <DependentUpon>20171003211112_UniqueAtorPrimeiroUltimoNome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20171003222638_Classificacao.cs" />
+    <Compile Include="Migrations\20171003222638_Classificacao.designer.cs">
+      <DependentUpon>20171003222638_Classificacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20171003225430_FilmeCheckConstraint.cs" />
+    <Compile Include="Migrations\20171003225430_FilmeCheckConstraint.designer.cs">
+      <DependentUpon>20171003225430_FilmeCheckConstraint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20171004155349_Enumerado.cs" />
+    <Compile Include="Migrations\20171004155349_Enumerado.designer.cs">
+      <DependentUpon>20171004155349_Enumerado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\AluraFilmesContextoModelSnapshot.cs" />
     <Compile Include="Negocio\Ator.cs" />
+    <Compile Include="Negocio\ClassificacaoIndicativa.cs" />
+    <Compile Include="Negocio\Cliente.cs" />
     <Compile Include="Negocio\Filme.cs" />
     <Compile Include="Negocio\FilmeAtor.cs" />
+    <Compile Include="Negocio\Funcionario.cs" />
     <Compile Include="Negocio\Idioma.cs" />
+    <Compile Include="Negocio\Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

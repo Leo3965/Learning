@@ -1,21 +1,24 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Alura.Filmes.App.Negocio
 {
     public class Ator
     {
-        public Ator()
-        {
-            this.Filmografia = new List<FilmeAtor>();
-        }
         public int Id { get; set; }
         public string PrimeiroNome { get; set; }
         public string UltimoNome { get; set; }
-        public IList<FilmeAtor> Filmografia { get; internal set; }
+        public IList<FilmeAtor> Filmografia { get; set; }
+
+        public Ator()
+        {
+            Filmografia = new List<FilmeAtor>();
+        }
 
         public override string ToString()
         {
-            return $"Actor {this.Id}: {this.PrimeiroNome} {this.UltimoNome}";
+            return $"Ator ({Id}): {PrimeiroNome} {UltimoNome}";
         }
     }
 }

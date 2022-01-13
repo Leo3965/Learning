@@ -10,6 +10,7 @@ namespace Alura.Filmes.App.Dados
         public void Configure(EntityTypeBuilder<Idioma> builder)
         {
             builder.ToTable("language");
+
             builder.Property(i => i.Id)
                 .HasColumnName("language_id");
 

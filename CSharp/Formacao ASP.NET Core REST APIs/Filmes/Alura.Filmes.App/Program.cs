@@ -1,8 +1,7 @@
 ﻿using Alura.Filmes.App.Dados;
-using Alura.Filmes.App.Negocio;
+using Alura.Filmes.App.Extensions;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Linq;
+using System.Data.SqlClient;
 
 namespace Alura.Filmes.App
 {
@@ -10,54 +9,43 @@ namespace Alura.Filmes.App
     {
         static void Main(string[] args)
         {
-            using (var contexto = new FilmesContexto())
+            using (var contexto = new AluraFilmesContexto())
             {
-                //var filme = contexto.Filmes
-                //    .Include(f => f.Atores)
-                //    .ThenInclude(a => a.Ator)
-                //    .FirstOrDefault();
-                //Console.WriteLine(filme);
-                //Console.WriteLine("Elenco ");
+                contexto.LogSQLToConsole();
 
-                var idiomas = contexto.Idiomas
-                    .Include(i => i.FilmesFalados);
+                var sql = "INSERT INTO language (name) VALUES ('Teste 1'), ('Teste 2'), ('Teste 3')";
+                var registros = contexto.Database.ExecuteSqlCommand(sql);
+                System.Console.WriteLine($"O total de registros afetados é {registros}.");
 
-                foreach (var item in idiomas)
-                {
-                    Console.WriteLine(item);
+                var deleteSql = "DELETE FROM language WHERE name LIKE 'Teste%'";
+                registros = contexto.Database.ExecuteSqlCommand(deleteSql);
+                System.Console.WriteLine($"O total de registros afetados é {registros}.");
 
-                    foreach (var i in item.FilmesFalados)
-                    {
-                        Console.WriteLine(i);
-                    }
-                    //var entidade = contexto.Entry(item);
-                    //var filmId = entidade.Property("film_id").CurrentValue;
-                    //var actorId = entidade.Property("actor_id").CurrentValue;
-                    //var lastUpd = entidade.Property("last_update").CurrentValue;
-                    //Console.WriteLine($"Filme {filmId}, Ator {actorId}, LastUpdate: {lastUpd}");
-                }
 
-                    //var atores = contexto.Atores
-                    //    .OrderByDescending(a => EF.Property<DateTime>(a, "last_update"))
-                    //    .Take(10);
-
-                    //foreach (var ator in atores)
-                    //{
-                    //    Console.WriteLine($"ator {ator}");
-                    //}
-
-                    //var ator = new Ator()
-                    //{
-                    //    PrimeiroNome = "Léo",
-                    //    UltimoNome = "Freitas"
-                    //};
-                    //contexto.Entry(ator).Property("last_update").CurrentValue = DateTime.Now;
-                    //foreach (var ator in contexto.Atores)
-                    //{
-                    //    System.Console.WriteLine(ator);
-                    //}
             }
-            
+        }
+
+        static void StoredProcedure(DbContext contexto)
+        {
+            var categ = "Action"; //36
+
+            var paramCateg = new SqlParameter("category_name", categ);
+
+            var paramTotal = new SqlParameter
+            {
+                ParameterName = "@total_actors",
+                Size = 4,
+                Direction = System.Data.ParameterDirection.Output
+            };
+
+            contexto.Database
+                .ExecuteSqlCommand(
+                  "total_actors_from_given_category @category_name, @total_actors OUT",
+                  paramCateg,
+                  paramTotal);
+
+            System.Console.WriteLine($"O total de atores na categoria {categ} é de {paramTotal.Value}.");
+
         }
     }
 }

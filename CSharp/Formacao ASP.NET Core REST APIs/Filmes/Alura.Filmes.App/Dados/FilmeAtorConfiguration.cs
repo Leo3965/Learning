@@ -5,21 +5,18 @@ using System;
 
 namespace Alura.Filmes.App.Dados
 {
-    internal class FilmeAtorConfiguration : IEntityTypeConfiguration<FilmeAtor>
+    public class FilmeAtorConfiguration : IEntityTypeConfiguration<FilmeAtor>
     {
         public void Configure(EntityTypeBuilder<FilmeAtor> builder)
         {
             builder.ToTable("film_actor");
 
             builder.Property<int>("film_id").IsRequired();
-
             builder.Property<int>("actor_id").IsRequired();
-
-            builder
-                .Property<DateTime>("last_update")
+            builder.Property<DateTime>("last_update")
+                .IsRequired()
                 .HasColumnType("datetime")
-                .HasDefaultValueSql("getdate()")
-                .IsRequired();
+                .HasDefaultValueSql("getdate()");
 
             builder.HasKey("film_id", "actor_id");
 
@@ -30,7 +27,7 @@ namespace Alura.Filmes.App.Dados
 
             builder
                 .HasOne(fa => fa.Ator)
-                .WithMany(f => f.Filmografia)
+                .WithMany(a => a.Filmografia)
                 .HasForeignKey("actor_id");
         }
     }

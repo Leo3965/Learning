@@ -9,28 +9,35 @@ namespace Alura.Filmes.App.Dados
     {
         public void Configure(EntityTypeBuilder<Filme> builder)
         {
-            builder.ToTable("film");
+            builder
+                .ToTable("film");
 
-            builder.Property(f => f.Id)
+            builder
+                .Property(f => f.Id)
                 .HasColumnName("film_id");
 
-            builder.Property(f => f.Titulo)
+            builder
+                .Property(f => f.Titulo)
                 .HasColumnName("title")
                 .HasColumnType("varchar(255)")
                 .IsRequired();
 
-            builder.Property(f => f.Descricao)
+            builder
+                .Property(f => f.Descricao)
                 .HasColumnName("description")
                 .HasColumnType("text");
 
-            builder.Property(f => f.AnoLancamento)
+            builder
+                .Property(f => f.AnoLancamento)
                 .HasColumnName("release_year")
                 .HasColumnType("varchar(4)");
 
-            builder.Property(f => f.Duracao)
+            builder
+                .Property(f => f.Duracao)
                 .HasColumnName("length");
 
-            builder.Property<DateTime>("last_update")
+            builder
+                .Property<DateTime>("last_update")
                 .HasColumnType("datetime")
                 .IsRequired();
 
@@ -46,6 +53,14 @@ namespace Alura.Filmes.App.Dados
                 .HasOne(f => f.IdiomaOriginal)
                 .WithMany(i => i.FilmesOriginais)
                 .HasForeignKey("original_language_id");
+
+            builder
+                .Property(f => f.TextoClassificacao)
+                .HasColumnName("rating")
+                .HasColumnType("varchar(10)");
+
+            builder
+                .Ignore(f => f.Classificacao);
         }
     }
 }
