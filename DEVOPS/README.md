@@ -1,3 +1,6 @@
+ > DevOps
+ >  - Artigo: [integração contínua](https://docs.google.com/document/d/1cSqCWkuNbW-c7MS2D0o9ovjfYBSdCCvyi-kEkTnEBRM/edit?usp=sharing)
+
 ## Instalando Docker no linux
 sudo apt-get remove docker docker-engine docker.io
 Depois, atualize o banco de dados de pacotes:
