@@ -24,3 +24,8 @@ sudo docker version
 E para executar o Docker sem precisar de sudo, adicione o seu usuário ao grupo docker:
 
 sudo usermod -aG docker $(whoami)
+
+## Docker-Machine
+curl -L https://github.com/docker/machine/releases/download/v0.16.0/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine &&
+chmod +x /tmp/docker-machine &&
+sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
