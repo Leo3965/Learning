@@ -1,9 +1,10 @@
 ## instalação Java
-$ sudo dpkg -i jdk-14_linux-x64_bin.deb
-$ sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-14/bin/java 1
-$ sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk-14/bin/javac 1
-$ sudo update-alternatives --config java
-$ sudo gedit /ect/environment - adicione o caminho para o executável java
+- $ sudo dpkg -i jdk-14_linux-x64_bin.deb
+- $ sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-14/bin/java 1
+- $ sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk-14/bin/javac 1
+- $ sudo update-alternatives --config java
+- $ sudo gedit /ect/environment - adicione o caminho para o executável java
+- 
 ![Screenshot from 2022-01-14 21-35-53](https://user-images.githubusercontent.com/69876788/149601569-8e1a32a4-9eb5-4e3f-891a-a9890ebdd9c5.png)
 
 
