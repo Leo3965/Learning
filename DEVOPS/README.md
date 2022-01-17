@@ -1,10 +1,17 @@
  # DevOps
-    > Artigo: [integração contínua](https://docs.google.com/document/d/1cSqCWkuNbW-c7MS2D0o9ovjfYBSdCCvyi-kEkTnEBRM/edit?usp=sharing)
+    Artigo: [integração contínua](https://docs.google.com/document/d/1cSqCWkuNbW-c7MS2D0o9ovjfYBSdCCvyi-kEkTnEBRM/edit?usp=sharing)
 
  # Linux Commands
     - ip address | mostra o ip da máquina
 
 # Docker
+## Comandos Docker
+    * `docker pull [image_name]:[image_version]` - o parâmetro "image_version" é opcional por padrão será preenchido com "lastest"
+
+    * `docker run -p [host_port]:[container_port] -e [environment_variables] -d [docker_image]` - o parâmetro -p define o binding de portas entre o host e o guest,  -e as varáveis de ambiente e o -d faz o detach do terminal 
+
+    * `docker exec -it [container_id || container_name] /bin/bash` - conecta ao terminal do contêiner
+
 #### Expor o deamon do docker para controle externo
     $ sudo mkdir -p /etc/systemd/system/docker.service.d/
     $ sudo vi /etc/systemd/system/docker.service.d/override.conf
