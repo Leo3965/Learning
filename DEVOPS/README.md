@@ -12,6 +12,8 @@ Artigo: [integração contínua](https://docs.google.com/document/d/1cSqCWkuNbW-
 
 * `docker exec -it [container_id || container_name] /bin/bash` - conecta ao terminal do contêiner
 
+* `docker build -t my-java-app:v1 .` - constroí uma imagem a partir de um docker file
+
 #### Expor o deamon do docker para controle externo
     $ sudo mkdir -p /etc/systemd/system/docker.service.d/
     $ sudo vi /etc/systemd/system/docker.service.d/override.conf
