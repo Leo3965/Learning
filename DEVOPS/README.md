@@ -14,6 +14,8 @@ Artigo: [integração contínua](https://docs.google.com/document/d/1cSqCWkuNbW-
 
 * `docker build -t my-java-app:v1 .` - constroí uma imagem a partir de um docker file
 
+* `docker start [container_id || container_name]` - reinicia um container parado
+
 #### Expor o deamon do docker para controle externo
     $ sudo mkdir -p /etc/systemd/system/docker.service.d/
     $ sudo vi /etc/systemd/system/docker.service.d/override.conf
